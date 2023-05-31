@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ListPosts;
+use App\Http\Livewire\Chat\CreateChat;
+use App\Http\Livewire\Chat\Main;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,14 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->get('/dashboard',ListPosts::class)->name('dashboard');
-// ->group(function (){
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
+Route::get('/users',CreateChat::class)->name('users');
+Route::get('/chat{key?}',Main::class)->name('chat');
 
+Route::get('/dashboard',ListPosts::class )->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
