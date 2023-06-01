@@ -16,6 +16,9 @@ class Message extends Model
         'conversation_id',
         'read',
         'body',
+        'created_at',
+        'type',
+        'url'
     ];
 
 

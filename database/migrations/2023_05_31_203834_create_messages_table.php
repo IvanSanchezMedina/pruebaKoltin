@@ -22,6 +22,7 @@ class CreateMessagesTable extends Migration
             $table->text('body')->nullable();
             $table->boolean('read')->default(0);
             $table->string('type')->nullable();
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }
