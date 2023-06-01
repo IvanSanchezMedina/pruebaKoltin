@@ -1,5 +1,5 @@
 
-## Pruab Ivan Sanchez para Full Stack Developer en Koltin
+## Prueba Ivan Sanchez para Full Stack Developer en Koltin
 
 Practica de Servicios Online para Koltin
 
